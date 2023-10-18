@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Page</title>
+    
+    <style>
+        body{
+            background-image: url(backgroung.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: white;
+        }
+
+        .yuvi{
+           color: white;
+           text-align: left;
+           text-align: top;
+        }
+
+       fieldset{
+        margin-top: 50px;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 20%;
+        
+        border: 5px groove;
+        
+        
+       }
+
+       .bookCall{
+        text-align: center;
+        font-size: 25px;
+       }
+
+       .intro{
+        text-align: center;
+        font-size:20px;
+       }
+
+       input[type=text]{
+        width: 100%;
+       }
+
+       
+
+    </style>
+</head>
+<body>
+    <h1 class="yuvi">
+        YUHA
+    </h1>
+
+    <form id="myform" onsubmit="dataprint()" >
+        <fieldset>
+
+        <legend class="bookCall">
+            Book a Call
+        </legend>
+
+        <p class="intro">
+            Book a call for travelling to mountains
+        </p>
+
+        <hr>
+
+        <label for="name"> Name : </label>
+        <div >
+        <input type="text" label="myName" id="name">
+        </div>
+
+        <label for="email">Email-Id : </label>
+        <div >
+        <input type="text" label="myEmail" id="email">
+        </div>
+
+        <label for="phone">Phone : </label>
+        <div >
+        <input type="text" label="myPhone" id="phone">
+        </div>
+
+        <label for="date">Date : </label>
+        <label for="time">Time : </label>
+        <div>
+            <input type="date" id="date">
+            <input type="time" id="time">
+        </div>
+
+        
+        <input class="btn" type="submit" value="SUBMIT">
+        <input  type="reset" value="RESET">
+        
+
+        </fieldset>
+    </form>
+
+    <script>
+        function dataprint(){
+    var name = document.getElementById("name").value;
+    
+
+    var email = document.getElementById("email").vale;
+    
+
+    var phone = document.getElementById("phone").value;
+
+    var date = document.getElementById("date").value;
+
+    var time = document.getElementById("time").value;
+
+
+
+    document.write("Name : " + name+ "<br>") ;
+    document.write("Email : " + email +"<br>");
+    document.write("Phone : " + phone+"<br>");
+    document.write("Date : " + date+"<br>");
+    document.write("Time : " + time+"<br>");
+}
+
+
+var btn = document.querySelector('.btn');
+btn.style.color = 'red';
+
+btn.addEventListener('mouseover', (e)=>{
+    document.querySelector("#myform").style.background = 'red';
+})
+
+btn.addEventListener('mouseout', (e)=>{
+    document.querySelector("#myform").style.background = 'wheat';
+})
+
+btn.addEventListener('click', (e)=>{
+    document.querySelector("#myform").style.background = 'blue';
+})
+
+    </script> 
+  
+</body>
+</html>
